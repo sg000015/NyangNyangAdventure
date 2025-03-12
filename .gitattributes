@@ -2,5 +2,3 @@ Build/Build.data filter=lfs diff=lfs merge=lfs -text
 Build/Build.framework.js filter=lfs diff=lfs merge=lfs -text
 Build/Build.loader.js filter=lfs diff=lfs merge=lfs -text
 Build/Build.wasm filter=lfs diff=lfs merge=lfs -text
-
-Build/** filter=lfs diff=lfs merge=lfs -text
