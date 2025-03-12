@@ -94,7 +94,7 @@
     function loadUnityWithEtag() {
       const canvas = document.querySelector("#unity-canvas");
 
-      getEtag("Build/Build.framework.js").then(eTag => {
+      getEtag("Build/Build2.framework.js").then(eTag => {
         if (!eTag) {
           console.error("eTag not found. Loading without cache.");
         }
