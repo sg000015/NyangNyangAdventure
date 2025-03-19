@@ -32,7 +32,7 @@
   </script>
 
 
-  <script src="Build/Build2.loader.js"></script>
+  <script src="Build/Build.loader.js"></script>
   <script>
 
 
@@ -94,7 +94,7 @@
     function loadUnityWithEtag() {
       const canvas = document.querySelector("#unity-canvas");
 
-      getEtag("Build/Build2.framework.js").then(eTag => {
+      getEtag("Build/Build.framework.js").then(eTag => {
         if (!eTag) {
           console.error("eTag not found. Loading without cache.");
         }
@@ -103,9 +103,9 @@
 
         createUnityInstance(canvas, {
           arguments: [],
-          dataUrl: "Build/Build2.data",
-          frameworkUrl: "Build/Build2.framework.js",
-          codeUrl: "Build/Build2.wasm",
+          dataUrl: "Build/Build.data?etag=${eTag}",
+          frameworkUrl: "Build/Build.framework.js?etag=${eTag}",
+          codeUrl: "Build/Build.wasm?etag=${eTag}",
           streamingAssetsUrl: "StreamingAssets",
           companyName: "OG-SOFT",
           productName: "NyangNyangAdventure",
